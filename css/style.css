@@ -1,0 +1,239 @@
+:root {
+	--primary: #07395c;
+	--secondary: #2a2e3f;
+	--orange: #fb8412;
+	--green: #009744;
+	--light: #eee;
+    --g-color: linear-gradient(#041b4d, #041668);
+}
+.bg-primary {
+	background-color: var(--primary) !important;
+}
+.bg-light {
+	background-color: var(--light) !important;
+}
+.bg-g {
+	background: var(--g-color) !important;
+}
+.text-primary {
+	color: var(--primary) !important;
+}
+.text-orange {
+	color: var(--orange) !important;
+}
+.text-secondary {
+	color: var(--secondary) !important;
+}
+/* ----- Default Css ----- */
+
+body {
+	font-family: 'Poppins', sans-serif;
+	font-size: 14px;
+	line-height: normal;
+	color: var(--secondary);
+	letter-spacing: 0.3px;
+	font-weight: 300;
+}
+ul {
+	list-style-type: none;
+	padding: 0;
+	margin: 0;
+}
+b,
+strong {
+	font-weight: 600;
+}
+a,
+a:hover,
+a:focus,
+button,
+button:hover,
+button:focus {
+	text-decoration: none;
+	box-shadow: none;
+	outline: none;
+}
+.font-weight-400 {
+    font-weight: 400 !important;
+}
+img {
+	max-width: 100%;
+}
+.logo {
+    width: 300px;
+}
+@media (max-width: 767px) {
+    .logo {
+        width: 200px;
+    }
+}
+.btn.btn-primary, .btn.btn-primary.close {
+    padding: 8px 36px;
+    border-radius: .25rem;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: var(--primary);
+    color: #fff;
+    border: none;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.btn.btn-primary:hover, .btn.btn-primary:focus {
+    background-color: #000;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+.btn.btn-green {
+    padding: 8px 36px;
+    border-radius: .25rem;
+    font-size: 16px;
+    font-weight: 500;
+    text-transform: uppercase;
+    background-color: var(--primary);
+    background-image: linear-gradient(#048543, #07a754);
+    color: #fff;
+    border: none;
+    transition: all 0.3s ease;
+}
+.btn.btn-green:hover, .btn.btn-green:focus {
+    opacity: 0.8;
+}
+
+label {
+    font-weight: 600;
+}
+.form-control {
+    font-size: 14px;
+    color: var(--primary);
+    box-shadow: none;
+    border: 1px solid var(--primary);
+    min-height: 45px;
+    border-radius: .25rem;
+    padding: 10px 15px;
+    -webkit-appearance: none;
+}
+.btn-input-h {
+    min-height: 45px;
+    display: inline-flex;
+    align-items: center;
+}
+.login-box {
+    width: 600px;
+    max-width: 100%;
+    margin: auto;
+    border-radius: 10px;
+}
+.login-box ul li {
+    font-size: 16px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 15px;
+}
+.login-box ul li span {
+    font-weight: 600;
+}
+.login-box ul li:not(:last-child) {
+    margin-bottom: 15px;
+}
+.form-check {
+    padding-left: calc(var(--bs-gutter-x)/ 2);
+}
+.form-check .form-check-input {
+    margin-left: 0;
+    float: inherit;
+    margin-right: 3px;
+}
+.verify-box {
+    display: grid;
+    grid-template-columns: 1fr 100px;
+    grid-gap: 15px;
+    align-items: center;
+}
+.verify-box .btn.btn-primary {
+    padding: 10px 30px;
+}
+b {
+    font-weight: 700;
+}
+ul.list-item {
+    list-style-type: disc;
+    padding-left: 17px;
+}
+ul.list-item li:not(:last-child) {
+    margin-bottom: 15px;
+}
+@media (max-width: 767px) {
+    .login-box ul li {
+        grid-template-columns: 1fr;
+        grid-gap: 0;
+    }
+}
+.progressbar {
+    width: 625px;
+    margin: auto;
+    text-align: center;
+    overflow: hidden;
+    display: flex;
+    justify-content: space-between;
+    grid-gap: 50px;
+    position: relative;
+}
+.progressbar:after {
+    content: "";
+    width: calc(100% - 40px);
+    height: 2px;
+    background-color: var(--orange);
+    position: absolute;
+    top: 21px;
+    left: 20px;
+}
+.progressbar li {
+    color: #fff;
+}
+.progressbar li span {
+    width: 40px;
+    margin: auto;
+    min-height: 40px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    color: var(--primary);
+    background-color: #fff;
+    font-size: 18px;
+    margin-bottom: 10px;
+    position: relative;
+    z-index: 9;
+}
+.progressbar li.active span {
+    background-color: var(--orange);
+    color: #fff;
+}
+.progressbar li.inactive {
+    color: var(--primary);
+}
+.progressbar li.inactive span {
+    color: #fff;
+}
+.progressbar li span {
+    font-size: 13px;
+    font-weight: 400;
+    letter-spacing: 1px;
+    margin-top: 3px;
+}
+@media (max-width: 767px) {
+    .progressbar {
+        width: 280px;
+        grid-gap: 15px;
+    }
+    .progressbar li {
+        font-size: 11px;
+    }
+    h5 {
+        font-size: 16px;
+    }
+    h6 {
+        font-size: 13px;
+    }
+}
